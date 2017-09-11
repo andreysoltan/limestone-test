@@ -1,0 +1,115 @@
+.hero-info {
+  @include font-roboto;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  font-size: 26px;
+
+  &__title {
+    @include font-poppins('SemiBold');
+    color: #333333;
+    text-transform: capitalize;
+    font-size: 38px;
+    text-align: left;
+    @media screen and (max-width: $tablet){ font-size: 16px; }
+  }
+
+  &__rating {
+
+    &-stars {
+      display: inline-block;
+      border: none;
+      float: left;
+      margin: 0;
+      padding: 0;
+      @media screen and (max-width: $tablet) {
+        display: block;
+        float: none;
+      }
+
+      i {
+        font-size: 20px;
+        color: #f7941d;
+      }
+      
+    }
+
+    &-reviews {
+      font-size: 20px;
+      margin-left: 20px;
+      color: #000;
+      text-decoration: underline;
+      transition: color .2s ease;
+      @media screen and (max-width: $tablet){
+        font-size: 14px;
+        display: block;
+      }
+
+      &:hover {
+        color: #4b4b4b;
+      }
+
+    }
+
+  }
+
+  &__list {
+
+    ul {
+      li {
+        font-size: 20px;
+        line-height: 27px;
+        @media screen and (max-width: $tablet) {
+          font-size: 10px;
+          line-height: 15px;
+        }
+      }
+    }
+
+  }
+
+  &__price {
+    font-size: 16px;
+    float: left;
+    @media screen and (max-width: $tablet){
+      font-size: 8px;
+    }
+
+    &-discount {
+
+      .price-discont__latest {
+        font-size: 2em;
+        color: #999898;
+      }
+
+      .price-discont__old {
+        display: inline-block;
+        width: 100px;
+        margin-left: 10px;
+      }
+    }
+
+    &-value {
+      color: $main-red;
+      font-size: 3em;
+      font-weight: 900;
+    }
+
+    &-info {
+      font-size: 16px;
+    }
+
+  }
+
+  .btn-buy {
+    float: right;
+    margin-top: 10%;
+
+    @media screen and (max-width: $tablet){
+      width: 100%;
+      max-width: 230px;
+      float: none;
+    }
+  }
+
+}

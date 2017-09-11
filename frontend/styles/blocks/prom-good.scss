@@ -1,0 +1,95 @@
+.prom-good {
+  position: relative;
+  height: 130px;
+  margin-top: 40px;
+  @media screen and (max-width: $tablet){
+    height: 70px;
+  }
+
+  &__container {
+    height: 130px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e6e6e6;
+    @media screen and (max-width: $tablet){
+      height: 70px;
+    }
+  }
+  
+  &__wrap {
+    display: table;
+    margin: 0 auto;
+    padding-left: 130px;
+    height: 100%;
+    @media screen and (max-width: $tablet){
+      padding-left: 60px;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    left: -130px;
+    bottom: 0;
+    width: 130px;
+    height: 180px;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @media screen and (max-width: $tablet){
+      width: 60px;
+      height: 80px;
+      left: -60px;
+    }
+  }
+
+  &__title {
+    margin: 10px 0;
+    @include font-poppins('Bold');
+    font-size: 32px;
+    color: #1d2b39;
+
+    @media screen and (max-width: $tablet){
+      font-size: 10px;
+    }
+  }
+
+  &__description {
+    margin-top: 0;
+    font-size: 20px;
+
+    @media screen and (max-width: $tablet){
+      font-size: 8px;
+    }
+
+    .price {
+      @include font-roboto('Bold');
+      color: $main-red;
+      font-size: 45px;
+
+      @media screen and (max-width: $tablet){
+        font-size: 10px;
+      }
+    }
+  }
+  &__cell {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 15px;
+    @media screen and (max-width: $tablet){
+      padding: 0 8px;
+      
+    }
+    .btn-buy {
+      display: inline-block;
+      @media screen and (max-width: $tablet){
+        height: 35px;
+        width: 100px;
+        font-size: 10px;
+      }
+    }
+  }
+
+}

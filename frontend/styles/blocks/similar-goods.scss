@@ -1,0 +1,140 @@
+.similar-goods {
+  width: 80%;
+  padding: 0 10%;
+  margin-top: 40px;
+  @include font-poppins('SemiBold');
+
+  @media screen and (max-width: $tablet){
+    padding: 0;
+    width: 100%;
+  }
+
+  &__title {
+    color: #1d304a;
+    font-size: 30px;
+    text-align: left;
+  }
+
+  .goods__wrap {
+    border: 3px solid transparent;
+  }
+
+  .first {
+    border-color: #9cc5dc;
+  }
+
+  .second {
+    border-color: #e1bfaf;
+  }
+
+  &__first,
+  &__second {
+    display: inline-block;
+    width: 47%;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+
+    @media screen and (max-width: $tablet){
+      width: 100%;
+    }
+
+    .title {
+      font-size: 20px;
+      margin: 20px 0 5px 20px;
+    }
+
+    .reviews {
+      margin-left: 20px;
+
+      &-stars {
+        display: inline-block;
+        border: none;
+        float: left;
+        margin: 0;
+        padding: 0;
+
+        i {
+          font-size: 20px;
+          color: #f7941d;
+        }
+      }
+
+      &-rating {
+        @include font-roboto;
+        margin-left: 10px;
+        color: #000;
+        transition: color .2s ease;
+
+        &:hover {
+          color: #4b4b4b;
+        }
+      }
+
+    }
+
+    .info {
+      @include font-roboto;
+      font-size: 16px;
+      margin-right: 126px;
+      ul {
+        li{
+          margin-left: -5px;
+          color: black;
+        }
+      }
+    }
+
+    .good {
+      height: 150px;
+      width: 100px;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 25px;
+      top: 10px;
+    }
+
+    .good-mirror {
+      @extend .good;
+      top: 140px;
+      opacity: .32;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__first {
+    background-color: #e3f1f9;
+    color: #1d304a;
+    float: left;
+  }
+
+  &__second {
+    background-color: #f8ece6;
+    color: #c4622e;
+    float: right;
+
+    .good-mirror {
+      top: 164px;
+    }
+  }
+
+  .label-offer {
+    font-size: 15px;
+    line-height: 20px;
+    font-family: initial;
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 150px;
+    bottom: 19px;
+    right: -39px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #a2796c;
+    background-image: linear-gradient(100deg, #a2796c 0%, #cc7c68 74%);
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+  }
+
+}

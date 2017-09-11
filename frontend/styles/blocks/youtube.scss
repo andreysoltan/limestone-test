@@ -1,0 +1,12 @@
+.youtube {
+  margin-top: 40px;
+
+  &__first {
+    margin-right: 20px;
+  }
+
+  @media screen and (max-width: $tablet){
+    display: none;
+  }
+
+}

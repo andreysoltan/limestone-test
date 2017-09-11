@@ -1,0 +1,14 @@
+.hero {
+  position: relative;
+  margin-top: 70px;
+  font-size: 0;
+  @media screen and (max-width: $tablet){ margin-top: 20px; }
+
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+  }
+}
